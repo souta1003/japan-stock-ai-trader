@@ -1,0 +1,16 @@
+weights:
+  trend: 2.0
+  volume: 1.5
+  rsi: 1.0
+  ftd: 2.5
+
+thresholds:
+  buy: 4.0
+  sell: -4.0
+
+risk:
+  stop_loss: 0.03
+  take_profit: 0.05
+
+market_filter:
+  use: true
