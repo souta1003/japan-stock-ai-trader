@@ -1,4 +1,4 @@
-from data import get_data
+from src.data.data import get_data
 
 def screen_symbols(symbols):
     """

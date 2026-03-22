@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# venv
+.venv/
+venv/
+ENV/
+env/
+pip-wheel-metadata/
+pyproject.toml.lock
+uv.lock
+
+# IDE
+.vscode/
+.idea/
+
+# logs / temp
+*.log
+*.tmp
+
+# data/cache
+*.sqlite3
+*.db

@@ -1,13 +1,17 @@
 import yaml
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
-from data import get_data
-from indicators import add_indicators, add_ftd
-from signal import calc_score_detail
-from backtest import backtest
-from learn import update_weights
-from notify import send_line
-from market import get_market_trend
-from screener import screen_symbols
+from src.data.data import get_data
+from src.indicators.indicators import add_indicators, add_ftd
+from src.signals.signal import calc_score_detail
+from src.backtest.backtest import backtest
+from src.learning.learn import update_weights
+from src.notification.notify import send_line
+from src.market.market import get_market_trend
+from src.screener.screener import screen_symbols
+
 
 # 対象銘柄（例）
 symbols = ["7203.T", "6758.T", "9984.T"]
@@ -19,7 +23,7 @@ def main():
     # 地合い取得
     market = get_market_trend()
 
-    with open("config.yaml") as f:
+    with open("config/config.yaml") as f:
         config = yaml.safe_load(f)
 
     for sym in targets:
